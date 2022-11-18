@@ -1,0 +1,150 @@
+/* 1. logo animation */
+#logo{
+    animation: mymove 5s;
+    width: 475px;
+}
+
+@keyframes mymove {
+    from {width: 25px; opacity: 0%;}
+    to{width: 475px; opacity: 100%;}
+}
+
+@keyframes nomove {
+    from{width: 475px; opacity: 100%;}
+    to{width:475px; opacity: 100%;}
+}
+
+/* 2-10. styling for default view  */
+
+body{
+    font-family: "Poppins", serif;
+    background-image: url(../images/concrete_seamless.png);
+    background-color: #f1f1f1;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.nav_links{
+    display: flex;
+    
+    flex-direction: column;
+}
+
+.nav_links :visited {
+    color:blue;
+}
+
+
+div.card > header{
+    background-color: #288088;
+    border: 2px solid #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    
+}
+
+.card {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    flex-basis: 450px;
+}
+
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+   
+    justify-content: center;
+    align-items: center;
+
+}
+
+.gallery img {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width:300px;
+}
+.gallery{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+/* 11-13. styling for screen width > 900 px */
+
+@media only screen and (min-width: 900px) {
+    header{
+        justify-content: space-between;
+    }
+    body > header{
+        position:sticky;
+        top: 0;
+    }
+    nav_links {
+        display: inline;
+    }
+    .card {
+        flex-basis: 275px;
+    }
+    div.card > header {
+        align-items: flex-start;
+    }
+}
+
+/*14. reduced motion view  */
+@media (prefers-reduced-motion) {
+    #logo{
+        width: 475px;
+        animation: nomove;
+    }
+}
+
+/* 15-21. print view  */
+
+@media print{
+    body {
+        font-family: "Arial", "Helvetica";
+        background-image: none;
+    }
+    nav{
+        width:100%;
+
+    }
+    .nav_links{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .pricing{
+        align-items: end;
+        flex-wrap: nowrap;
+
+    }
+    .card{
+        border: 2px solid #45addd;
+        flex-basis: 325px;
+    }
+
+    .gallery {
+        display:none;
+    }
+
+    #gallery{
+        display: none;
+    }
+    div.pricing div.card ul li + li:nth-child(2):after{
+        content: '\1F44D'
+    }
+    
+    header{
+        justify-content: center;
+    }
+    body > header{
+        flex-direction: column;
+    }
+}
