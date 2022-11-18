@@ -40,8 +40,8 @@ header{
 
 
 div.card > header{
-    background-color: #288088;
-    border: 2px solid #45ADAD;
+    background-color: orange;
+    border: 2px solid orangered;
     padding-top: 20px;
     padding-bottom: 20px;
     border-top-left-radius: 50px;
@@ -65,7 +65,7 @@ div.card > header{
 }
 
 .gallery img {
-    border: 10px solid #50C7C7;
+    border: 10px solid orangered;
     margin: 10px;
     width:300px;
 }
@@ -126,7 +126,7 @@ div.card > header{
 
     }
     .card{
-        border: 2px solid #45addd;
+        border: 2px solid orange;
         flex-basis: 325px;
     }
 

@@ -6,7 +6,7 @@ body{
   
   header{
     background: #fff;
-    border-bottom: 3px solid #50C7C7;
+    border-bottom: 3px solid orangered;
     margin-bottom:20px
   }
   
@@ -26,7 +26,7 @@ body{
     padding: 0 30px;
   }
   
-  a.skip{
+  /* a.skip{
     background: white;
     left: 0;
     padding: 6px;
@@ -41,7 +41,7 @@ body{
     top:20px;
     color: black;
     text-decoration-style: solid;
-  }
+  } */
   
   *:focus{
     border: 2px solid black;
@@ -53,7 +53,7 @@ body{
   }
   
   .nav_item a:hover, a:focus{
-    color: #50C7C7;
+    color: orangered;
     text-decoration: underline;
     -webkit-text-decoration-style: dotted;
             text-decoration-style: dotted;
@@ -88,7 +88,7 @@ body{
     border: 0;
     margin-left: 5%;
     border-radius: 7px;
-    background: #288080;
+    background: orange;
     color: white;
     font-size: 1em;
   }
