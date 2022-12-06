@@ -1,38 +1,49 @@
-/* 1. logo animation */
+#profile {
+    width: 400px;
+}
 #logo{
-    animation: mymove 5s;
-    width: 475px;
+    
+    width: 300px;
 }
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+  }
 
-@keyframes mymove {
-    from {width: 25px; opacity: 0%;}
-    to{width: 475px; opacity: 100%;}
+input[type=submit] {
+    background-color: #38803C;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;  
 }
-
-@keyframes nomove {
-    from{width: 475px; opacity: 100%;}
-    to{width:475px; opacity: 100%;}
-}
-
-/* 2-10. styling for default view  */
 
 body{
-    font-family: "Poppins", serif;
-    background-image: url(../images/concrete_seamless.png);
+    font-family: "Verdana", serif;
     background-color: #f1f1f1;
+    background-image: url("images/quotes.jpg");
 }
 
 header{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    /* align-items: center; */
 
 }
 .nav_links{
     display: flex;
     
-    flex-direction: column;
+    flex-direction: row;
 }
+/* .nav_item{
+    
+} */
 
 .nav_links :visited {
     color:blue;
@@ -75,6 +86,32 @@ div.card > header{
     justify-content: center;
 }
 
+main {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: center;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.testimonial_item {
+    /* height: 100px;
+    line-height: 100px; */
+    padding: 1%;
+    padding-top: 5%;
+
+    margin: auto;
+    text-align:center;
+    justify-self: center;
+    vertical-align: middle;
+    background-image: url("images/quotes.jpg");
+}
+
 /* 11-13. styling for screen width > 900 px */
 
 @media only screen and (min-width: 900px) {
@@ -85,24 +122,21 @@ div.card > header{
         position:sticky;
         top: 0;
     }
-    nav_links {
+    /* nav_links {
         display: inline;
-    }
+    } */
     .card {
         flex-basis: 275px;
     }
     div.card > header {
         align-items: flex-start;
     }
-}
-
-/*14. reduced motion view  */
-@media (prefers-reduced-motion) {
-    #logo{
-        width: 475px;
-        animation: nomove;
+    main {
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }
+
 
 /* 15-21. print view  */
 
@@ -115,10 +149,10 @@ div.card > header{
         width:100%;
 
     }
-    .nav_links{
+    /* .nav_links{
         display: flex;
         justify-content: space-around;
-    }
+    } */
 
     .pricing{
         align-items: end;
