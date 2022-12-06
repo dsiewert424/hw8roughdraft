@@ -54,7 +54,6 @@ body{
   
   .nav_item a:hover, a:focus{
     color: orangered;
-    text-decoration: underline;
     -webkit-text-decoration-style: dotted;
             text-decoration-style: dotted;
   }
