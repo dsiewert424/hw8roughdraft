@@ -1,6 +1,10 @@
 <!DOCTYPE html>
+<link href="https://fonts.cdnfonts.com/css/roblox-new" rel="stylesheet">
 <html lang="en">
   <head>
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/roblox-new');
+      </style>
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/png" href="images/rocks-and-robots-logo.jpg"/>
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
@@ -11,19 +15,25 @@
     <title>Rocks and Robots</title>
   </head>
   <body>
-    <a class = "skip" href="#skip">Skip to Main Content</a>
+    <a class = "skip" tabindex="0" href="#skip">Skip to Main Content</a>
     <header>
-      <img src="images/rocks-and-robots-logo.jpg" alt="" id = "logo">
+      <!-- <button class="header__button" id="btnNav" type="button">
+        <i class="material-icons">menu</i>
+       </button> -->
+      
       <nav>
         <ul class="nav_links">
-          <li class="nav_item"><a href="home.html">Home</a></li>
-          <li class="nav_item"><a href="campcourses.html">Camp Courses</a></li>
-          <li class="nav_item"><a href="refund.html">Refund or Reschedule</a></li>
-          <li class="nav_item"><a href="testimonials.html">Testimonials</a></li>
-          <li class="nav_item"><a href="faqs.html">FAQs</a></li>
-          <li class="nav_item"><a href="contact.html">Contact Us</a></li>
-          <li class="nav_item"><a href="about.html">About Us</a></li>
+          
+          <li class="nav_item_1"><a href="home.html"><img src="images/rocks-and-robots-logo.jpg" alt="Rocks and Robots Logo" id = "logo"></a></li>
+          <li class="nav_item_2" tabindex="-1"><a href="home.html">Home</a></li>
+          <li class="nav_item_3" tabindex="-2"><a href="campcourses.html">Camp Courses</a></li>
+          <li class="nav_item_4" tabindex="-3"><a href="refund.html">Refund</a></li>
+          <li class="nav_item_5" tabindex="-4"><a href="testimonials.html">Testimonials</a></li>
+          <li class="nav_item_6" tabindex="-5"><a href="faqs.html">FAQs</a></li>
+          <li class="nav_item_7" tabindex="-6"><a href="contact.html">Contact Us</a></li>
+          <li class="nav_item_8" tabindex="-7"><a href="about.html">About Us</a></li>
         </ul>
+        <div class="nav__overlay"></div>
     </nav>
   </header>
   <main class="about" id="skip">

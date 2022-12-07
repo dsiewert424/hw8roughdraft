@@ -1,3 +1,8 @@
+a:-webkit-any-link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
 .skip {
     background: #e77e23;
     height: 30px;
@@ -16,13 +21,24 @@
     width: 400px;
 }
 #logo{
-    
-    width: 20%;
+    width: 75%;
+    height: 75%;
 }
 
 footer {
     padding-left: 0px;
     padding-right: 0px;
+}
+.home-photos{
+    display:flex;
+    flex-direction: column;
+
+    padding: 0px 0px 0px 0px;
+    width: 200%;
+    align-items: flex-start;
+}
+.home-photos:nth-child(n) {
+    align-self: stretch;
 }
 
 .info {
@@ -33,10 +49,14 @@ footer {
     justify-self: center;
     vertical-align: middle;
 }
-.george {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+.george, .row, .robots {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
+
 input {
     width: 100%;
     padding: 12px 20px;
@@ -46,8 +66,9 @@ input {
     box-sizing: border-box; 
   }
 
+
 input[type=submit] {
-    background-color: #38803C;
+    background-color:orangered;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -57,9 +78,9 @@ input[type=submit] {
 }
 
 body{
-    font-family: "Verdana", serif;
+    font-family: 'Gotham Black', sans-serif;
     background-color: #f1f1f1;
-    background-image: url("images/quotes.jpg");
+    
 }
 
 header{
@@ -70,25 +91,28 @@ header{
 
 }
 .nav_links{
-    display: flex;
+    display: grid;
     color:white;
 
     
-    flex-direction: row;
-    column-gap: 5%;
+    /* grid-template-columns: ; */
+    column-gap: 3%;
+    row-gap: 1.5%;
+    padding: 1%;
 }
 /* .nav_item{
     
 } */
 
-.nav_links :visited {
-    color:black;
-}
 
-.nav_item {
-    width: 200px;
+.nav_item_2, .nav_item_3, .nav_item_4, .nav_item_5, .nav_item_6, .nav_item_7, .nav_item_8{
+    width: 100%;
+    height: 75%;
+    line-height: 75px;
     background-color: orange;
     border-radius: 12px;
+    text-decoration: none;
+    color: whitesmoke;
 
     text-align:center;
     align-content: center;
@@ -96,12 +120,19 @@ header{
     text-align:center;
     justify-self: center;
     vertical-align: middle;
+    box-shadow: 5px 5px 2px gray;
+    
+}
+
+.nav_item_2:hover, .nav_item_3:hover, .nav_item_4:hover, .nav_item_5:hover, .nav_item_6:hover, .nav_item_7:hover, .nav_item_8:hover{
+    background-color: yellow;
+    color:black;
 }
 
 
 .courses{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 40px;
     
 }
@@ -119,10 +150,12 @@ main {
 
 .testimonials {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     align-content: center;
     justify-content: center;
     align-items: baseline;
+    
+    
 }
 
 .testimonial_item {
@@ -135,12 +168,14 @@ main {
     text-align:center;
     justify-self: center;
     vertical-align: middle;
-    background-image: url("images/quotes.jpg");
+    
+    
 }
+
 
 /* 11-13. styling for screen width > 900 px */
 
-@media only screen and (min-width: 900px) {
+/* @media only screen and (min-width: 900px) {
     header {
         justify-content: space-between;
     }
@@ -151,17 +186,11 @@ main {
     /* nav_links {
         display: inline;
     } */
-    .card {
-        flex-basis: 275px;
-    }
-    div.card > header {
-        align-items: flex-start;
-    }
     main {
         margin-left: 10%;
         margin-right: 10%;
     }
-}
+/* } */
 
 @media screen and (min-width: 776px){
     .testimonials{
@@ -171,11 +200,83 @@ main {
     .courses {
         grid-template-columns: 1fr 1fr;
     }
+    #logo{
+        width: 100%;
+        height: 100%;
+    }
+    .nav_item_2, .nav_item_3, .nav_item_4, .nav_item_5, .nav_item_6, .nav_item_7, .nav_item_8{
+        width: 100%;
+        height: 75%;
+    }
+
+    .testimonials {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .home-photos {
+        flex-direction: row;
+    }
+
+    .george, .robots, .rocks {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+    
     
 
 }
 
 @media screen and (min-width: 1120px){
+
+    .nav_item_1{
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+    }
+    .nav_item_2{
+        grid-column: 3 / span 1;
+        grid-row: 1 /span 1;
+    }
+    .nav_item_3{
+        grid-column: 4 / span 1;
+        grid-row: 1 /span 1;
+    }
+    .nav_item_4{
+        grid-column: 5 / span 1;
+        grid-row: 1 /span 1;
+    }
+    .nav_item_5{
+        grid-column: 6 / span 1;
+        grid-row: 1 /span 1;
+    }
+    .nav_item_6{
+        grid-column: 3 / span 1;
+        grid-row: 2 /span 1;
+    }
+    .nav_item_7{
+        grid-column: 4 / span 1;
+        grid-row: 2 /span 1;
+    }
+    .nav_item_8{
+        grid-column: 5 / span 1;
+        grid-row: 2 /span 1;
+    }
+    #logo{
+        width: 100%;
+        height: 100%;
+    }
+    .nav_item_2, .nav_item_3, .nav_item_4, .nav_item_5, .nav_item_6, .nav_item_7, .nav_item_8{
+        width: 100%;
+        height: 75%;
+    }
+
+    
+   
+
+    .nav_links{
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
 
     .courses {
         grid-template-columns: 1fr 1fr 1fr;
