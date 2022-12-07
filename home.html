@@ -25,13 +25,13 @@
         <ul class="nav_links">
           
           <li class="nav_item_1"><a href="home.html"><img src="images/rocks-and-robots-logo.jpg" alt="Rocks and Robots Logo" id = "logo"></a></li>
-          <li class="nav_item_2" tabindex="-1"><a href="home.html">Home</a></li>
-          <li class="nav_item_3" tabindex="-2"><a href="campcourses.html">Camp Courses</a></li>
-          <li class="nav_item_4" tabindex="-3"><a href="refund.html">Refund</a></li>
-          <li class="nav_item_5" tabindex="-4"><a href="testimonials.html">Testimonials</a></li>
-          <li class="nav_item_6" tabindex="-5"><a href="faqs.html">FAQs</a></li>
-          <li class="nav_item_7" tabindex="-6"><a href="contact.html">Contact Us</a></li>
-          <li class="nav_item_8" tabindex="-7"><a href="about.html">About Us</a></li>
+          <li class="nav_item_2" tabindex="-1"><a class = "btn" href="home.html">Home</a></li>
+          <li class="nav_item_3" tabindex="-2"><a class = "btn" href="campcourses.html">Camp Courses</a></li>
+          <li class="nav_item_4" tabindex="-3"><a class = "btn" href="refund.html">Refund</a></li>
+          <li class="nav_item_5" tabindex="-4"><a class = "btn" href="testimonials.html">Testimonials</a></li>
+          <li class="nav_item_6" tabindex="-5"><a class = "btn" href="faqs.html">FAQs</a></li>
+          <li class="nav_item_7" tabindex="-6"><a class = "btn" href="contact.html">Contact Us</a></li>
+          <li class="nav_item_8" tabindex="-7"><a class = "btn" href="about.html">About Us</a></li>
         </ul>
         <div class="nav__overlay"></div>
     </nav>
@@ -239,5 +239,13 @@
     <footer>
       <p>Copyright &copy; 2022 Rocks and Robots</p>
     </footer>
+    <script>
+      let current_url = document.location;
+      document.querySelectorAll(".nav_links .btn").forEach(function(e){
+         if(e.href == current_url){
+            e.classList += " current";
+         }
+      });
+    </script>
   </body>
 </html>

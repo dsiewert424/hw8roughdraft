@@ -129,6 +129,21 @@ header{
     color:black;
 }
 
+.nav_item_2:active, .nav_item_3:active, .nav_item_4:active, .nav_item_5:active, .nav_item_6:active, .nav_item_7:active, .nav_item_8:active{
+    background-color: yellow;
+    box-shadow: none;
+}
+
+li:active {
+    background-color: yellow;
+    box-shadow: none;
+}
+
+.btn.current {
+    color: darkblue;
+
+}
+
 
 .courses{
     display:grid;
