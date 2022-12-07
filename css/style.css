@@ -1,3 +1,4 @@
+@-ms-viewport{ width: device-width; }
 a:-webkit-any-link {
     color: black;
     cursor: pointer;
@@ -68,7 +69,7 @@ input {
 
 
 input[type=submit] {
-    background-color:orangered;
+    background-color:black;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
